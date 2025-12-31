@@ -68,39 +68,38 @@
     
 
     
-    <script type="text/javascript"> 
-    function reward(event, url, type) {
-        document.querySelector(".body-loading").style.display = "flex";
-          setTimeout(function(){
-            showTip(url, type);
-          } , 5000);
-    }
-    function showTip(url, type) { 
-fbq('track', 'Lead');
-        document.querySelector(".body-loading .loader").style.display = "none";
-        document.querySelector(".tooltip").style.display = "block";
-        let text = type === "apple" ? "App Store" : "Google Play";
-        document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
-        document.querySelector(".tooltip-button-continue").href = url;
-        document
-            .querySelector(".tooltip-button-cancel")
-            .addEventListener("click", function () {
-                document.querySelector(".body-loading").style.display = "none";
-                window.location.reload();
-            });
-        document
-            .querySelector(".tooltip-button-continue")
-            .addEventListener("click", function () {
-                document.querySelector(".body-loading").style.display = "none";
-            });
-
-
-        try{
-          gtag('event', 'conversion', {'send_to':  'AW-17807197056/nNsbCMKMjNIbEICHkatC'})
-        }catch(e){
-          console.log(e);
+    <script type="text/javascript">
+        function reward(event, url, type) {
+            document.querySelector(".body-loading").style.display = "flex";
+            setTimeout(function () {
+                showTip(url, type);
+            }, 5000);
         }
-    }
+        function showTip(url, type) {
+            document.querySelector(".body-loading .loader").style.display = "none";
+            document.querySelector(".tooltip").style.display = "block";
+            let text = type === "apple" ? "App Store" : "Google Play";
+            document.querySelector(".tooltip .tooltip-text p span").innerHTML = text;
+            document.querySelector(".tooltip-button-continue").href = url;
+            document
+                .querySelector(".tooltip-button-cancel")
+                .addEventListener("click", function () {
+                    document.querySelector(".body-loading").style.display = "none";
+                    window.location.reload();
+                });
+            document
+                .querySelector(".tooltip-button-continue")
+                .addEventListener("click", function () {
+                    document.querySelector(".body-loading").style.display = "none";
+                });
+
+
+            try {
+                gtag('event', 'conversion', { 'send_to': 'AW-17844665898/mnSuCI-1rNobEKr8_7xC' });
+            } catch (e) {
+                console.log(e);
+            }
+        }
 
     </script>
     <style>
